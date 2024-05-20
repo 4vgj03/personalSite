@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,14 +19,33 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
+    // Send email using EmailJS
+    sendEmail();
+  };
+
+  const sendEmail = () => {
+    // Initialize EmailJS with your public key
+    emailjs.init({ publicKey: 'iWbqJZrmkQqjKq3yd' });
+
+    // Replace 'contact_service' and 'contact_form' with your service ID and template ID
+    emailjs.sendForm('service_um1g1kn', 'template_blm36kd', '#contact-form')
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        // Optionally, reset the form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      }, (error) => {
+        console.error('Failed to send email:', error);
+      });
   };
 
   return (
     <div>
-      <h1>Contact</h1>
-      <form onSubmit={handleSubmit}>
+      <h1>Contact 5/20/2024 v3</h1>
+      <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label>Name:</label>
           <input
