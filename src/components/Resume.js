@@ -115,7 +115,7 @@ const resumeItems = [
         <li><strong>Solutioning:</strong> Led many projects. Recent example: proposed and implemented methods to double Renewal rate of contracts and reduce time from 7 minutes to 30 seconds.</li>
       </ul>
     ),
-    keywords: ['javascript', 'react', 'web development'],
+    keywords: ['javascript', 'react', 'web development','2016','2017','2018','2019','2020','2021','2022','2023','2024'],
     logo: TomorrowEnergyLogo, // Path to logo image
   },
   {
@@ -131,7 +131,7 @@ const resumeItems = [
         <li>Acted as a key liaison between departments, facilitating clear communication and collaboration to ensure successful project implementation.</li>
       </ul>
     ),
-    keywords: ['leadership', 'javascript', 'react'],
+    keywords: ['leadership', 'javascript', 'react','2014','2015','2016'],
     logo: DiamondResortsLogo, // Path to logo image
   },
   // Add more resume items as needed
