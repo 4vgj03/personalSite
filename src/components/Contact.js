@@ -44,7 +44,7 @@ const Contact = () => {
 
   return (
     <div>
-      <h1>Contact 5/21/2024 v4</h1>
+      <h1>Contact 5/21/2024 v5</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label>Name:</label>
