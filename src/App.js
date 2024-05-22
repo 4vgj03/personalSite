@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Contacttest from './components/Contacttest';
 import './App.css';
 import Footer from './components/Footer';
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/resume" element={<Resume />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/contacttest" element={<Contacttest />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer /> {/* Render the Footer component */}
