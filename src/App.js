@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import NotFoundPage from './components/NotFoundPage';
+// import NotFoundPage from './components/NotFoundPage';
 
 const routes = {
     '/': () => <Home />,
@@ -21,7 +21,7 @@ function App() {
     return (
         <>
             <Header />
-            {routeResult || <NotFoundPage />}
+            {/* {routeResult || <NotFoundPage />} */}
             <Footer />
         </>
     );
