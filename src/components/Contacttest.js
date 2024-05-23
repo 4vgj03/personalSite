@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import '../App.css'; // Ensure the global CSS is imported
+import './ContactForm.css';
 
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
+  const [countdown, setCountdown] = useState(null); // State for the countdown timer
+  const navigate = useNavigate();
+
   const sendEmail = (e) => {
     e.persist();
     e.preventDefault();
@@ -17,38 +23,49 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          setStateMessage('Message sent!');
+          setCountdown(5); // Start the countdown timer
           setIsSubmitting(false);
-          setTimeout(() => {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
         },
         (error) => {
           setStateMessage('Something went wrong, please try again later');
           setIsSubmitting(false);
-          setTimeout(() => {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
         }
       );
-    
+
     // Clears the form after sending the email
     e.target.reset();
   };
+
+  useEffect(() => {
+    if (countdown !== null && countdown > 0) {
+      setStateMessage(`Message sent! Taking you home in ${countdown} seconds.`);
+      const timer = setTimeout(() => {
+        setCountdown(countdown - 1);
+      }, 1000);
+
+      return () => clearTimeout(timer);
+    } else if (countdown === 0) {
+      navigate('/');
+    }
+  }, [countdown, navigate]);
+
   return (
-    <div>
-    <p>5/23/2024 v1</p>
-    <form onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" disabled={isSubmitting} />
-      {stateMessage && <p>{stateMessage}</p>}
-    </form>
+    <div className="contact-form-wrapper">
+      <p className="contact-heading">5/23/2024 v1</p>
+      <form onSubmit={sendEmail} className="contact-form">
+        <label>Name</label>
+        <input type="text" name="user_name" />
+        <label>Email</label>
+        <input type="email" name="user_email" />
+        <label>Message</label>
+        <textarea name="message" />
+        <input type="submit" value="Send" disabled={isSubmitting} />
+        {stateMessage && (
+          <p>{stateMessage}</p>
+        )}
+      </form>
     </div>
   );
 };
+
 export default ContactForm;

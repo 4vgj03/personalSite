@@ -1,81 +1,71 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+import '../App.css'; // Ensure the global CSS is imported
+import './ContactForm.css';
 
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+const ContactForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [stateMessage, setStateMessage] = useState(null);
+  const [countdown, setCountdown] = useState(null); // State for the countdown timer
+  const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
+    e.persist();
     e.preventDefault();
-    // Send email using EmailJS
-    sendEmail();
+    setIsSubmitting(true);
+    emailjs.sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setCountdown(5); // Start the countdown timer
+          setIsSubmitting(false);
+        },
+        (error) => {
+          setStateMessage('Something went wrong, please try again later');
+          setIsSubmitting(false);
+        }
+      );
+
+    // Clears the form after sending the email
+    e.target.reset();
   };
 
-  const sendEmail = () => {
-    // Initialize EmailJS with your public key
-    emailjs.init({ publicKey: 'iWbqJZrmkQqjKq3yd' });
+  useEffect(() => {
+    if (countdown !== null && countdown > 0) {
+      setStateMessage(`Message sent! Taking you home in ${countdown} seconds.`);
+      const timer = setTimeout(() => {
+        setCountdown(countdown - 1);
+      }, 1000);
 
-    // Replace 'contact_service' and 'contact_form' with your service ID and template ID
-    emailjs.sendForm('service_um1g1kn', 'template_blm36kd', '#contact-form')
-      .then((result) => {
-        console.log('Email sent successfully:', result.text);
-        // Optionally, reset the form after successful submission
-        setFormData({
-          name: '',
-          email: '',
-          message: ''
-        });
-      }, (error) => {
-        console.error('Failed to send email:', error);
-      });
-  };
+      return () => clearTimeout(timer);
+    } else if (countdown === 0) {
+      navigate('/');
+    }
+  }, [countdown, navigate]);
 
   return (
-    <div>
-      <h1>Contact 5/22/2024 v2</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Message:</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Submit</button>
+    <div className="contact-form-wrapper">
+      <p className="contact-heading">5/23/2024 v1</p>
+      <form onSubmit={sendEmail} className="contact-form">
+        <label>Name</label>
+        <input type="text" name="user_name" />
+        <label>Email</label>
+        <input type="email" name="user_email" />
+        <label>Message</label>
+        <textarea name="message" />
+        <input type="submit" value="Send" disabled={isSubmitting} />
+        {stateMessage && (
+          <p>{stateMessage}</p>
+        )}
       </form>
     </div>
   );
 };
 
-export default Contact;
+export default ContactForm;

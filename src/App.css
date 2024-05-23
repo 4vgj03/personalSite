@@ -1,21 +1,23 @@
-.App {
-  text-align: center;
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Center container */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Example max-width for desktop */
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Styles for the header section */
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure the header covers the entire viewport height */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +26,15 @@
   color: white;
 }
 
+/* Styles for links */
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Responsive design */
+@media (max-width: 768px) {
+  /* Adjust container width for smaller screens */
+  .container {
+    padding: 10px; /* Adjust padding for smaller screens */
   }
 }

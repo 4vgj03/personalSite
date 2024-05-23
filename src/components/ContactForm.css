@@ -1,0 +1,73 @@
+/* Styles for the contact form wrapper */
+.contact-form-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: center; /* Center items horizontally */
+    height: calc(100vh - 20px); /* Set wrapper height to 100% viewport height minus some padding */
+    margin-top: 20px; /* Add some margin to move it down from the top */
+  }
+  
+  /* Styles for the <p> tag */
+  .contact-heading {
+    text-align: center; /* Center align the text */
+    margin-bottom: 20px; /* Add some space below the <p> tag */
+  }
+  
+  /* Styles for the contact form */
+  .contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure the form takes full width of container */
+    max-width: 400px; /* Limit the maximum width of the form */
+  }
+  
+  /* Additional styles as needed */
+  .contact-form label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%; /* Take up full width */
+    padding: 8px; /* Reduce padding */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    font-size: 14px; /* Adjust font size */
+  }
+  
+  .contact-form input[type="submit"] {
+    width: 100%; /* Take up full width */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .contact-form input[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .contact-form {
+      padding: 10px;
+      overflow-x: hidden; /* Hide horizontal overflow */
+    }
+  }
+  
