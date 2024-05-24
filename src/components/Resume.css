@@ -54,7 +54,9 @@
     transition: transform 0.2s ease-in-out;
     /* Add relative positioning to the resume item */
     position: relative;
+    background-color: rgba(255, 255, 255, 0.6); /* White background with 90% opacity */
   }
+  
   
   .job-logo {
     position: relative;
