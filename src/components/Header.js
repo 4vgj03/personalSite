@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import hamburgerIcon from '../assets/images/hamburger.png'; // Adjust the path as needed
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,9 +20,7 @@ function Header() {
         <Link to="/contact" onClick={toggleMenu}>Contact</Link>
       </div>
       <div className="hamburger" onClick={toggleMenu}>
-        <div></div>
-        <div></div>
-        <div></div>
+        <img src={hamburgerIcon} alt="Menu" />
       </div>
     </header>
   );

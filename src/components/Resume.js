@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Resume.css';
 import DiamondResortsLogo from "../assets/images/drlogo4.png"
-import TomorrowEnergyLogo from "../assets/images/TELogo.png"
+import TomorrowEnergyLogo from "../assets/images/te-logo-3.png"
 
 const Resume = () => {
   const [searchTerm, setSearchTerm] = useState('');

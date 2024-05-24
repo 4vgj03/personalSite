@@ -57,7 +57,7 @@
   }
   
   .job-logo {
-    position: absolute;
+    position: relative;
     top: -20px; /* Adjust top position as needed */
     left: -20px; /* Adjust left position as needed */
     width: 50px; /* Adjust size as needed */
@@ -65,4 +65,10 @@
     border-radius: 50%; /* Optional: makes the logo circular */
     /* Position the logo relative to its parent (.resume-item) */
     position: absolute;
+    z-index: 1;
   }
+
+  .menu {
+    position: relative; /* or absolute/fixed if already set */
+    z-index: 10; /* Any number higher than the logo's z-index */
+}
