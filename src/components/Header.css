@@ -44,7 +44,6 @@
   } */
   
 /* hamburger.css */
-
 .hamburger {
   display: none; /* Hidden by default, shown on mobile via media query */
   cursor: pointer; /* Change cursor to pointer when hovering */
@@ -60,7 +59,6 @@
     display: block; /* Show the hamburger menu */
   }
 }
-
   @media (max-width: 768px) {
     .navbar-links {
       display: none;
