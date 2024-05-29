@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Resume from './components/Resume';
 import ProjectList from './components/ProjectList'; // Import ProjectList component
 import BandGenerator from './components/BandGenerator'; // Import the BandGenerator component
+import WeatherApp from './projects/weatherapp/weatherApp';
 import Contact from './components/Contact';
 import Contacttest from './components/Contacttest';
 import './App.css';
@@ -19,6 +20,7 @@ function App() {
         <Route path="/resume" element={<Resume />} />
         <Route path="/projects" element={<ProjectList />} />
         <Route path="/projects/bandgenerator" element={<BandGenerator />} />
+        <Route path="/projects/weatherapp" element={<WeatherApp />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/contacttest" element={<Contacttest />} />
         <Route path="*" element={<Home />} />

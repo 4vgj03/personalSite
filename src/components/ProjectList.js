@@ -12,6 +12,9 @@ const ProjectList = () => {
         <li>
           <Link to="/projects/to-do-list">To Do List</Link>
         </li>
+        <li>
+          <Link to="/projects/weatherapp">Weather</Link>
+        </li>
         {/* Add more projects as needed */}
       </ul>
     </div>
