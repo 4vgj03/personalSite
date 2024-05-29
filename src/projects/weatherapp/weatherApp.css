@@ -3,67 +3,65 @@
 
 /* Full screen background */
 .weather-app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Use min-height to ensure the container fills the viewport */
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
-  color: #fff;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
 }
 
 /* Background image for specific weather conditions */
 .weather-app.clouds {
-  background-image: url('./images/clouds-1.png');
+    background-image: url('./images/clouds-1.png');
 }
 
 /* Container for search box and results */
 .form-form-container {
-  max-width: 600px; /* Initial max-width for desktop */
-  width: 100%; /* Initial width to fill the parent container */
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.7); /* Background color with 70% opacity */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px; /* Add padding */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
-  border: 2px solid #ccc; /* Add border for visibility */
-  z-index: 1; /* Set a higher z-index */
-  /* Add padding for mobile devices */
-  padding-left: 10px;
-  padding-right: 10px;
+    max-width: 600px;
+    min-height: 200px; /* Set minimum height */
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center contents vertically */
 }
-
-@media (min-width: 768px) {
-  /* Adjust max-width for larger screens */
-  .form-form-container {
-      max-width: 800px; /* Adjust as needed */
-  }
-}
-
 
 /* Apply the font to the input fields */
 #cityInput, #stateInput {
-    border: none;
-    border-bottom: 2px solid #ccc;
+    border: none; /* Remove border */
+    border-bottom: 2px solid #ccc; /* Add bottom border */
     padding: 15px;
     font-size: 1.2rem;
     font-family: 'Play', sans-serif;
     background-color: transparent;
-    margin-bottom: 10px; /* Add space between input fields */
+    margin-bottom: 10px;
+    width: calc(100% - 30px);
+    box-sizing: border-box;
 }
 
+/* Change bottom border color on focus */
 #cityInput:focus, #stateInput:focus {
-    outline: none;
-    border-bottom: 2px solid #007bff;
+    outline: none; /* Remove default focus outline */
+    border-bottom-color: #007bff; /* Change bottom border color on focus */
 }
 
 label {
     font-size: 1.5rem;
     margin-right: 10px;
     color: #333;
+    width: 100%;
+    text-align: left;
 }
 
 button {
@@ -74,10 +72,8 @@ button {
     background-color: #007bff;
     color: white;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
+    align-self: flex-end;
+    margin-top: 10px;
 }
 
 .weather-data {
@@ -98,4 +94,10 @@ button:hover {
     margin: 0 0 15px 0;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    .form-form-container {
+        padding: 10px;
+    }
 }
