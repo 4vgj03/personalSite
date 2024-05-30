@@ -51,8 +51,10 @@ body {
   body::before {
     content: "";
     background-image: url('assets/images/marble-background-mobile.png');
-    background-size: 100%;
+    background-size: cover; /* Cover the entire viewport */
     background-attachment: fixed; /* Ensure the background does not scroll */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+    background-position: center center; /* Center the background image */
     position: fixed;
     top: 0;
     left: 0;
