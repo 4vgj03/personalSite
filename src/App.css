@@ -45,5 +45,6 @@ body {
   body {
     background-size: 100%; /* Resize the background image to fit the container without cropping */
     background-image: url('assets/images/marble-background-mobile.png');
+    background-attachment: fixed; /* Ensure the background does not scroll */
   }
 }
