@@ -35,6 +35,7 @@ body {
   color: #61dafb;
 }
 
+
 /* Responsive design */
 @media (max-width: 768px) {
   /* Adjust container width for smaller screens */
@@ -43,9 +44,20 @@ body {
   }
   
   body {
-    background-size: 100%; /* Resize the background image to fit the container without cropping */
+    background: none; /* Remove background from body */
+    position: relative; /* Required for positioning the pseudo-element */
+  }
+
+  body::before {
+    content: "";
     background-image: url('assets/images/marble-background-mobile.png');
-    /*background-attachment: fixed; /* Ensure the background does not scroll */
-    /*overflow-x: hidden; /* Hide horizontal scrollbar */
+    background-size: 100%;
+    background-attachment: fixed; /* Ensure the background does not scroll */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it is behind all other content */
   }
 }
