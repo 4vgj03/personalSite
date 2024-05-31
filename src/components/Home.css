@@ -1,18 +1,95 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* HomePage.css */
+
+.bodyCenter {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.top-container {
+  position: relative;
+  text-align: center;
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.cloud-top, .cloud-bottom, .mountain, .profile-pic, .skillImage, .skillImage2 {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.h1homepage {
+  font-family: 'Sacramento', cursive;
+  font-size: 4rem;
+  margin: 0.5rem 0;
+}
+
+.h2homepage {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.middle-container {
+  padding: 1rem;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  max-width: 200px;
+  border-radius: 50%;
+}
+
+.skills {
+  text-align: center;
+}
+
+.skill-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.customhthree {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.contact-me {
+  text-align: center;
+}
+
+.contact-me a {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .h1homepage {
+    font-size: 3rem;
   }
-  
-  .App {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+  .h2homepage {
+    font-size: 1.5rem;
   }
-  
-  .top-container, .middle-container, .bottom-container {
-    width: 100%;
+}
+
+@media (max-width: 480px) {
+  .h1homepage {
+    font-size: 2.5rem;
   }
-  
-  
+
+  .h2homepage {
+    font-size: 1.25rem;
+  }
+
+  .profile img {
+    max-width: 150px;
+  }
+}
