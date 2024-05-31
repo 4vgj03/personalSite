@@ -14,7 +14,7 @@ function Header() {
 
   return (
     <header className="navbar">
-      <div className="navbar-links"><Link to="/">Welcome!</Link></div>
+      <div className="navbar-logo"><Link to="/">Welcome!</Link></div>
       <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
         <Link to="/" onClick={toggleMenu}>Home</Link>
         <Link to="/resume" onClick={toggleMenu}>Resume</Link>
