@@ -9,23 +9,25 @@ import WeatherApp from './projects/weatherapp/weatherApp';
 import Contact from './components/Contact';
 import Contacttest from './components/Contacttest';
 import './App.css';
-import Footer from './components/Footer';
+import BottomContainer from './components/BottomContainer';
 
 function App() {
   return (
     <Router>
-      <Header /> {/* Render the Header component */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/projects" element={<ProjectList />} />
-        <Route path="/projects/bandgenerator" element={<BandGenerator />} />
-        <Route path="/projects/weatherapp" element={<WeatherApp />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/contacttest" element={<Contacttest />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-      <Footer /> {/* Render the Footer component */}
+      <div className="App">
+        <Header /> {/* Render the Header component */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/projects" element={<ProjectList />} />
+          <Route path="/projects/bandgenerator" element={<BandGenerator />} />
+          <Route path="/projects/weatherapp" element={<WeatherApp />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/contacttest" element={<Contacttest />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+        <BottomContainer /> {/* Render the Footer component */}
+      </div>
     </Router>
   );
 }

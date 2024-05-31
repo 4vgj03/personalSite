@@ -1,0 +1,19 @@
+.top-container {
+  position: relative;
+  text-align: center;
+  background-color: transparent;
+}
+
+.cloud-top, .cloud-bottom {
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+}

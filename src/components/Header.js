@@ -1,4 +1,4 @@
-  import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import './hamburger.css';
@@ -14,7 +14,7 @@ function Header() {
 
   return (
     <header className="navbar">
-      <div className="navbar-logo">Welcome!</div>
+      <div className="navbar-links"><Link to="/">Welcome!</Link></div>
       <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
         <Link to="/" onClick={toggleMenu}>Home</Link>
         <Link to="/resume" onClick={toggleMenu}>Resume</Link>

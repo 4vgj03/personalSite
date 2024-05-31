@@ -1,0 +1,49 @@
+.middle-container {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.profile img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.intro {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+}
+
+.skills {
+  margin-top: 2rem;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.skillImage, .skillImage2 {
+  width: 100px;
+  margin-right: 1rem;
+}
+
+.contact-me {
+  margin-top: 2rem;
+}
+
+.contact-message {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+

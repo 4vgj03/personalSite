@@ -47,11 +47,6 @@ const Resume = () => {
     return '';
   };
   
-  
-
-  
-  
-
   const isYearInRange = (years, searchYear) => {
     const yearRange = years.toString().split('-');
     if (yearRange.length === 2) {
