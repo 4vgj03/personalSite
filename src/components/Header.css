@@ -1,6 +1,5 @@
 /* Header.css */
 
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -30,28 +29,15 @@
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add glow effect on hover */
 }
 
-.navbar-links.active {
-  display: flex; /* Show the links when active */
-}
-
-/* Logo Section "Welcome!"*/
-.navbar-logo {
-  display: flex;
-  gap: 1rem;
-}
-
+/* Logo Section "Welcome!" */
 .navbar-logo a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .navbar-logo a:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add glow effect on hover */
-}
-
-.navbar-logo.active {
-  display: flex; /* Show the links when active */
 }
 
 .hamburger {
