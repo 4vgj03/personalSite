@@ -33,7 +33,7 @@ const projects = [
 
 const ProjectList = () => {
   return (
-    <div>
+    <div className="projects-container">
       <h1 className="header-projects">Projects</h1>
       <div className="project-list">
         {projects.map((project, index) => (

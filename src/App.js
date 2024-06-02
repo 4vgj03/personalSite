@@ -4,7 +4,7 @@ import Header from './components/Header'; // Import Header from separate file
 import Home from './components/Home';
 import Resume from './components/Resume';
 import ProjectList from './components/ProjectList'; // Import ProjectList component
-import BandGenerator from './components/BandGenerator'; // Import the BandGenerator component
+import BandGenerator from './projects/bandgenerator/BandGenerator'
 import WeatherApp from './projects/weatherapp/weatherApp';
 import Contact from './components/Contact';
 import Contacttest from './components/Contacttest';

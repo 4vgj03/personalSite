@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './Resume.css';
-import DiamondResortsLogo from "../assets/images/drlogo4.png"
-import TomorrowEnergyLogo from "../assets/images/te-logo-3.png"
+import DiamondResortsLogo from "../assets/images/drlogo4.png";
+import TomorrowEnergyLogo from "../assets/images/te-logo-3.png";
+import SimpsonCollegeLogo from "../assets/images/simpson-college-logo.png";
+import Web2024Logo from "../assets/images/web2024v1.png";
 
 const Resume = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -10,14 +12,11 @@ const Resume = () => {
   const handleSearch = (e) => {
     const value = e.target.value.toLowerCase();
     setSearchTerm(value);
-  
+
     const filtered = resumeItems.filter(item => {
-      // Convert company name to lowercase string
       const companyNameText = typeof item.companyName === 'string' ? item.companyName.toLowerCase() : '';
-  
-      // Convert description to lowercase string
       const descriptionText = typeof item.description === 'string' ? item.description.toLowerCase() : extractTextFromDescription(item.description).toLowerCase();
-  
+
       return (
         item.title.toLowerCase().includes(value) ||
         companyNameText.includes(value) ||
@@ -26,27 +25,26 @@ const Resume = () => {
         isYearInRange(item.years, value)
       );
     });
-  
+
     setFilteredItems(filtered);
   };
-  
-  // Function to recursively extract text from JSX elements
+
   const extractTextFromDescription = (element) => {
     if (typeof element === 'string') {
       return element;
     }
-  
+
     if (Array.isArray(element)) {
       return element.map(extractTextFromDescription).join(' ');
     }
-  
+
     if (element.props.children) {
       return extractTextFromDescription(element.props.children);
     }
-  
+
     return '';
   };
-  
+
   const isYearInRange = (years, searchYear) => {
     const yearRange = years.toString().split('-');
     if (yearRange.length === 2) {
@@ -58,17 +56,16 @@ const Resume = () => {
     return years.toString().includes(searchYear);
   };
 
-  return (
-    <div className="resume-container">
-      <input
-        type="text"
-        className="search-bar"
-        placeholder="Search for any word or year..."
-        value={searchTerm}
-        onChange={handleSearch}
-      />
-      <div className="resume-list">
-        {filteredItems.map((item, index) => (
+  const renderSection = (title, items) => {
+    const filteredItemsInSection = items.filter(item => filteredItems.includes(item));
+    if (filteredItemsInSection.length === 0) {
+      return null;
+    }
+
+    return (
+      <div className="resume-section">
+        <h2>{title}</h2>
+        {filteredItemsInSection.map((item, index) => (
           <div key={index} className="resume-item">
             <img src={item.logo} alt="Logo" className="job-logo" />
             <h3>{item.title}</h3>
@@ -80,12 +77,34 @@ const Resume = () => {
           </div>
         ))}
       </div>
+    );
+  };
+
+  const workExperienceItems = resumeItems.filter(item => item.category === 'Work Experience');
+  const educationItems = resumeItems.filter(item => item.category === 'Education');
+  const certificateItems = resumeItems.filter(item => item.category === 'Certificates');
+
+  return (
+    <div className="resume-container">
+      <input
+        type="text"
+        className="search-bar"
+        placeholder="Search for any word or year..."
+        value={searchTerm}
+        onChange={handleSearch}
+      />
+      <div className="resume-list">
+        {renderSection('Work Experience', workExperienceItems)}
+        {renderSection('Certificates', certificateItems)}
+        {renderSection('Education', educationItems)}
+      </div>
     </div>
   );
 };
 
 const resumeItems = [
   {
+    category: 'Work Experience',
     title: 'IT Manager',
     companyName: 'Tomorrow Energy',
     location: 'Houston, TX',
@@ -111,9 +130,10 @@ const resumeItems = [
       </ul>
     ),
     keywords: ['javascript', 'react', 'web development','2016','2017','2018','2019','2020','2021','2022','2023','2024'],
-    logo: TomorrowEnergyLogo, // Path to logo image
+    logo: TomorrowEnergyLogo,
   },
   {
+    category: 'Work Experience',
     title: 'Business Analyst (Contract)',
     companyName: 'Diamond Resorts',
     location: 'Las Vegas, NV',
@@ -127,9 +147,40 @@ const resumeItems = [
       </ul>
     ),
     keywords: ['leadership', 'javascript', 'react','2014','2015','2016'],
-    logo: DiamondResortsLogo, // Path to logo image
+    logo: DiamondResortsLogo,
   },
-  // Add more resume items as needed
+  // Add education items
+  {
+    category: 'Education',
+    title: 'Bachelor of Science in Computer Science',
+    companyName: 'Simpson College',
+    location: 'Indianola, IA',
+    companyLink: 'https://simpson.edu/',
+    years: '2006-2011',
+    description: (
+      <ul>
+        <li>Completed coursework in software development, algorithms, data structures, and computer systems.</li>
+      </ul>
+    ),
+    keywords: ['computer science', 'university', 'bachelor', '2010', '2011', '2012', '2013', '2014'],
+    logo: SimpsonCollegeLogo,
+  },
+  // Add certificate items
+  {
+    category: 'Certificates',
+    title: 'The Complete 2024 Web Development Bootcamp',
+    companyName: 'Udemy',
+    location: 'Online',
+    companyLink: 'https://www.udemy.com/course/the-complete-web-development-bootcamp',
+    years: '2024',
+    description: (
+      <ul>
+        <li>Earned certification demonstrating proficiency in JavaScript programming and best practices.</li>
+      </ul>
+    ),
+    keywords: ['javascript', 'certificate', '2024'],
+    logo: Web2024Logo,
+  },
 ];
 
 export default Resume;

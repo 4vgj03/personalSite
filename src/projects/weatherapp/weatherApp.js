@@ -89,7 +89,7 @@ const WeatherApp = () => {
               placeholder="Enter state"
             />
           </div>
-          <button type="submit">Go</button>
+          <button className='weather-button' type="submit">Go</button>
         </form>
   
         {weatherData && (

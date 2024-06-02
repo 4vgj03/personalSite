@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './BandGenerator.css';
 
 const BandGenerator = () => {
   const [adjective, setAdjective] = useState('');
@@ -15,13 +16,14 @@ const BandGenerator = () => {
   };
 
   return (
-    <div>
-      <h1>Band Name Generator</h1>
-      <button onClick={generateBandName}>Generate Band Name</button>
-      <p>Band Name: {adjective} {noun}</p>
+    <div className="band-generator-app">
+      <div className="band-generator-container">
+        <h1>Band Name Generator</h1>
+        <button className='band-button' onClick={generateBandName}>Generate Band Name</button>
+        <p>Band Name: {adjective} {noun}</p>
+      </div>
     </div>
   );
-  
 };
 
 export default BandGenerator;

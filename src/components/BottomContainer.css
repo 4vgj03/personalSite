@@ -1,14 +1,31 @@
 /* BottomContainer.css */
 
 .bottom-container {
-  position: fixed;
   left: 0;
-  bottom: 0;
   width: 100%;
   background-color: #333;
   padding: 20px;
   text-align: center;
   z-index: 10;
+}
+
+/* Gradient Background */
+.gradient-background {
+  background: linear-gradient(300deg, #000000, #4d4a4a, #000000);
+  background-size: 200% 200%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .footer-link {

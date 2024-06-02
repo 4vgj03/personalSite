@@ -22,6 +22,7 @@ body {
   /* padding-top: 50px; */
   justify-content: center; /* Center the grid items horizontally */
   flex-grow: 1;
+  margin-bottom: 80px;
 }
 
 .project-item {
@@ -44,4 +45,9 @@ body {
 .project-item h3 {
   margin: 0;
   font-size: 1.2rem;
+}
+
+.projects-container {
+  flex: 1;
+  padding: 20px;
 }
