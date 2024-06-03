@@ -7,6 +7,9 @@
   padding: 1rem;
   background-color: #333;
   color: white;
+  position: sticky; /* Makes the header sticky */
+  top: 0; /* Sticks the header to the top */
+  z-index: 1000; /* Ensures the header is above other content */
 }
 
 .navbar-logo {
@@ -57,9 +60,9 @@
     gap: 0;
     position: absolute;
     top: 60px; /* Adjust as per your header height */
-    right: 0;
+    left: 0; /* Ensure the menu starts from the left edge */
     background-color: #333;
-    width: 100%;
+    width: 100%; /* Make sure it takes the full width */
     z-index: 10;
   }
 

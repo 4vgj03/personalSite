@@ -1,169 +1,238 @@
 /* HomePage.css */
 
 .bodyCenter {
-    color: #40514E;
-    font-family: 'Merriweather', serif;
-    margin: 0;
-    text-align: center;
-  }
+  color: #40514E;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  text-align: center;
+}
 
 .home-page-container .top-container {
-    position: relative;
-    background-color: #E8F9FD;
-    padding-top: 100px;
-  }
-  
-  .home-page-container .middle-container {
-    margin: 100px 0;
-  }
-  
- 
-  
-  .customhthree {
+  position: relative;
+  background-image: url('../assets/images/korean-garden-bridge.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 100px;
+  color: white; /* Ensure text is readable on the background */
+  margin-bottom: 1000px;
+  height: 900px;
+}
+
+.home-page-container .middle-container {
+  margin: 100px 0;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+  border-radius: 8px; /* Rounded corners for modern look */
+}
+
+.customhthree {
   color: #11999E;
   font-family: 'Montserrat', sans-serif;
 }
 
-
 .ahrefcustom {
-    color: #11999E;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-  }
-  
-  a:hover{
-    color: #EAF6F6;
-  }
-  
-  
-  
-  div {
-    /*background-color: #E8F9FD;*/
-  }
-  
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #EAF6F6;
+}
+
+div {
+  /*background-color: #E8F9FD;*/
+}
+
+.h1homepage {
+  color: #fff;
+  font-family: 'Sacramento', cursive;
+  font-size: 5.625rem;
+  margin: 50px auto 0 auto;
+  text-shadow: -1px 1px 0 #000,
+  1px 1px 0 #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
+}
+
+h2 {
+  color: #66BFBF;
+  font: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+
+.h2homepage {
+  color: #fff;
+  font: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  padding-bottom: 10px;
+  text-shadow: -1px 1px 0 #000,
+  1px 1px 0 #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
+}
+
+hr {
+  border: dotted #EAF6F6 6px;
+  border-bottom: none;
+  margin: 100px auto;
+  width: 5%;
+}
+
+p {
+  line-height: 2;
+}
+
+.bottom-container {
+  background-color: #333;
+  margin-top: 100px;
+  padding: 50px 0 20px;
+}
+
+.btn {
+  background: #11cdd4;
+  background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+  background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+
+.btn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+
+.cloud-bottom {
+  position: absolute;
+  right: 39%;
+  top: -3%;
+  height: 52%;
+  width: max-content;
+  opacity: .7;
+}
+
+.cloud-top {
+  position: absolute;
+  right: 25%;
+  top: -15%;
+  height: 50%;
+  width: auto;
+  opacity: .8;
+}
+
+.contact-message {
+  margin: 40px auto 60px;
+  width: 40%;
+}
+
+.copyright {
+  color: #EAF6F6;
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
+
+.intro {
+  width: 25%;
+  margin: auto;
+}
+
+.middle-container {
+  margin: 100px 0;
+}
+
+.skillImage {
+  float: left;
+  margin-right: 30px;
+  width: 15%;
+}
+
+.skillImage2 {
+  float: right;
+  margin-left: 30px;
+  width: 15%;
+}
+
+.skill-row {
+  line-height: 2;
+  margin: 100px auto;
+  width: 50%;
+  text-align: left;
+}
+
+.top-container {
+  position: relative;
+  background-image: url('../assets/images/korean-bridge-2.png'); /* Ensure background image is applied */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Fixed background attachment */
+  padding-top: 100px;
+  color: white; /* Ensure text is readable on the background */
+  height: 850px;
+  margin-bottom: 50px;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
   .h1homepage {
-    color: #66BFBF;
-    font-family: 'Sacramento', cursive;
-    font-size: 5.625rem;
-    /*line-height: 2;*/
-    margin: 50px auto 0 auto;
+      font-size: 3rem;
   }
-  
+
   h2 {
-    color: #66BFBF;
-    font: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
-    padding-bottom: 10px;
+      font-size: 1.5rem;
   }
-  
-  
-  
-  hr {
-    border: dotted #EAF6F6 6px;
-    border-bottom: none;
-    margin: 100px auto;
-    width: 5%;
+
+  .middle-container {
+      margin-top: -1rem; /* Adjust margin for mobile view */
   }
-  
-  p {
-    line-height: 2;
+}
+
+@media (max-width: 780px) {
+  .h1homepage {
+      font-size: 2.5rem;
   }
-  
-  .bottom-container {
-    background-color: #333;
-    margin-top: 100px;
-    padding: 50px 0 20px;
+
+  h2 {
+      font-size: 1.25rem;
   }
-  
-  .btn {
-    background: #11cdd4;
-    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
-    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
-    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
-    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
-    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
-    -webkit-border-radius: 8;
-    -moz-border-radius: 8;
-    border-radius: 8px;
-    font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-    margin-bottom: 50px;
+
+  .intro {
+      width: 80%;
   }
-  
-  .btn:hover {
-    background: #30e3cb;
-    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
-    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
-    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
-    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
-    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
-    text-decoration: none;
+
+  .skill-row {
+      width: 90%;
   }
-  
+
+  .contact-message {
+      width: 90%;
+  }
+
   .cloud-bottom {
     position: absolute;
-    right: 50%;
-    top: 50%;
-    height: 50%;
-    width: auto;
+    right: 28%;
+    top: 1%;
+    height: 38%;
+    width: max-content;
     opacity: .7;
   }
-  
-  .cloud-top {
-    position: absolute;
-    right: 25%;
-    top: -15%;
-    height: 50%;
-    width: auto;
-    opacity: .8;
-  }
-  
-  .contact-message{
-    margin: 40px auto 60px;
-    width: 40%;
-  }
-  
-  .copyright {
-    color: #EAF6F6;
-    font-size: 0.75rem;
-    paddin: 20px 0;
-  }
-  
-  .intro {
-    width: 25%;
-    margin: auto;
-  }
-  
-  .middle-container {
-    margin: 100px 0;
-  }
-  
-  .skillImage {
-    float: left;
-    margin-right: 30px;
-    width: 15%;
-  }
-  
-  .skillImage2 {
-    float: right;
-    margin-left: 30px;
-    width: 15%;
-  }
-  
-  .skill-row {
-    line-height: 2;
-    margin: 100px auto;
-    width: 50%;
-    text-align: left;
-  }
-  
-  .top-container {
-    position: relative;
-    background-color: #E8F9FD;
-    padding-top: 100px;
-  }
-  
+}

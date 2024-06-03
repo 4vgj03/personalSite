@@ -1,78 +1,110 @@
 /* src/components/Resume.css */
 
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.resume-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .resume-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    margin-bottom: 100px;
-  }
-  
-  
-  .search-bar {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  .resume-list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin: 10px;
-  }
-  
-  
-  .resume-item:hover {
-    transform: scale(1.02);
-  }
-  
-  .resume-item h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.5rem;
-  }
-  
-  .company {
-    font-weight: bold;
-  }
-  
-  .years {
-    font-style: italic;
-  }
-  
-  .description {
-    margin-top: 10px;
-  }
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 100px;
+  flex: 1; /* Take up remaining space */
+}
 
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
 
-  .resume-item {
-    position: relative; /* Position relative for absolute positioning of logo */
-    padding: 20px;
-    border-radius: 4px;
-    color: #000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-    /* Add relative positioning to the resume item */
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.6); /* White background with 90% opacity */
-  }
-  
-  
-  .job-logo {
-    position: relative;
-    top: -20px; /* Adjust top position as needed */
-    left: -20px; /* Adjust left position as needed */
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
-    border-radius: 50%; /* Optional: makes the logo circular */
-    /* Position the logo relative to its parent (.resume-item) */
-    position: absolute;
-    z-index: 1;
-  }
+.resume-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 10px;
+}
 
-  .menu {
-    position: relative; /* or absolute/fixed if already set */
-    z-index: 10; /* Any number higher than the logo's z-index */
+.resume-item:hover {
+  transform: scale(1.02);
+}
+
+.resume-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.company {
+  font-weight: bold;
+}
+
+.years {
+  font-style: italic;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.resume-item {
+  position: relative; /* Position relative for absolute positioning of logo */
+  padding: 20px;
+  border-radius: 4px;
+  color: #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  /* Add relative positioning to the resume item */
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.6); /* White background with 90% opacity */
+  margin-top: 30px;
+}
+
+.job-logo {
+  position: relative;
+  top: -20px; /* Adjust top position as needed */
+  left: -20px; /* Adjust left position as needed */
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  border-radius: 50%; /* Optional: makes the logo circular */
+  /* Position the logo relative to its parent (.resume-item) */
+  position: absolute;
+  z-index: 1;
+}
+
+.menu {
+  position: relative; /* or absolute/fixed if already set */
+  z-index: 10; /* Any number higher than the logo's z-index */
+}
+
+.bottom-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  /* Ensure the footer is not fixed */
+  position: static;
+}
+
+.footer-link {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 10px;
 }

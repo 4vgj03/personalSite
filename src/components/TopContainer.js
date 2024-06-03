@@ -5,7 +5,7 @@ import './TopContainer.css';
 const TopContainer = () => {
   return (
     <div className="top-container text-center">
-      <img className="img-fluid" src="/images/floating-clouds-2.gif" alt="cloudimage" />
+      <img className="img-fluid" src="/images/mountains.jpg" alt="cloudimage" />
       <h1>hi, I'm Joe!</h1>
       <h2>I like to code</h2>
       <img className="mountain img-fluid" src="/images/mountain.png" alt="mountainimage" />

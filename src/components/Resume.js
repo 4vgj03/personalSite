@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Resume.css';
 import DiamondResortsLogo from "../assets/images/drlogo4.png";
 import TomorrowEnergyLogo from "../assets/images/te-logo-3.png";
-import SimpsonCollegeLogo from "../assets/images/simpson-college-logo.png";
+import SimpsonCollegeLogo from "../assets/images/simpson-icon.ico";
 import Web2024Logo from "../assets/images/web2024v1.png";
 
 const Resume = () => {
@@ -85,18 +85,20 @@ const Resume = () => {
   const certificateItems = resumeItems.filter(item => item.category === 'Certificates');
 
   return (
-    <div className="resume-container">
-      <input
-        type="text"
-        className="search-bar"
-        placeholder="Search for any word or year..."
-        value={searchTerm}
-        onChange={handleSearch}
-      />
-      <div className="resume-list">
-        {renderSection('Work Experience', workExperienceItems)}
-        {renderSection('Certificates', certificateItems)}
-        {renderSection('Education', educationItems)}
+    <div className="resume-page">
+      <div className="resume-container">
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="Search for any word or year..."
+          value={searchTerm}
+          onChange={handleSearch}
+        />
+        <div className="resume-list">
+          {renderSection('Work Experience', workExperienceItems)}
+          {renderSection('Certificates', certificateItems)}
+          {renderSection('Education', educationItems)}
+        </div>
       </div>
     </div>
   );

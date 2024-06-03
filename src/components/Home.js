@@ -5,11 +5,11 @@ const Home = () => {
   return (
     <div className='bodyCenter'>
       <div className="top-container text-center">
-        <img className="cloud-top img-fluid" src="/images/floating-clouds-2.gif" alt="cloudimage" />
+        {/* <img className="cloud-top img-fluid" src="/images/floating-clouds.gif" alt="cloudimage" /> */}
         <h1 className="h1homepage">hi, I'm Joe</h1>
         <h2 className="h2homepage">I like to code</h2>
-        <img className="mountain img-fluid" src="/images/mountain.png" alt="mountainimage" />
-        <img className="cloud-bottom img-fluid" src="/images/floating-clouds-2.gif" alt="cloudimage" />
+        {/* <img className="mountain img-fluid" src="/images/mountains.jpg" alt="mountainimage" /> */}
+        {/* <img className="cloud-bottom img-fluid" src="/images/floating-clouds-2.gif" alt="cloudimage" /> */}
       </div>
       <div className="middle-container">
         <div className="profile">

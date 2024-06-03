@@ -4,18 +4,29 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
+  background-image: url('/images/mountains.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .top-container {
   position: relative;
   text-align: center;
-  background-color: transparent;
-  padding: 1rem;
+  padding: 2rem;
+  width: 100%;
+  height: auto;
+  background-image: url('/images/mountains.jpg'); /* Ensure background image is applied */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-attachment: scroll; /* Allow background to scroll with content */
+  z-index: 1; /* Ensure it is visible */
+  color: white; /* Ensure text is readable on the background */
 }
 
 .cloud-top, .cloud-bottom, .mountain, .profile-pic, .skillImage, .skillImage2 {
   width: 100%;
-  max-width: 100%;
+  max-width: 200px; /* Adjust max-width for better visibility */
   height: auto;
 }
 
@@ -23,16 +34,21 @@
   font-family: 'Sacramento', cursive;
   font-size: 4rem;
   margin: 0.5rem 0;
+  color: white; /* Ensure text is readable on the background */
 }
 
 .h2homepage {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   margin: 0.5rem 0;
+  color: white; /* Ensure text is readable on the background */
 }
 
 .middle-container {
   padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+  border-radius: 8px; /* Rounded corners for modern look */
+  margin-top: -2rem; /* Adjust margin to overlap with top-container */
 }
 
 .profile {
@@ -67,6 +83,15 @@
 .contact-me a {
   display: inline-block;
   margin-top: 1rem;
+  padding: 10px 20px; /* Add padding for better button appearance */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border-radius: 5px; /* Rounded corners for modern look */
+  text-decoration: none; /* Remove underline */
+}
+
+.contact-me a:hover {
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
 /* Media queries for mobile responsiveness */
@@ -77,6 +102,10 @@
 
   .h2homepage {
     font-size: 1.5rem;
+  }
+
+  .middle-container {
+    margin-top: -1rem; /* Adjust margin for mobile view */
   }
 }
 
