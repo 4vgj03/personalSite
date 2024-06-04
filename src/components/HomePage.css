@@ -244,6 +244,9 @@ p {
 
   .top-container {
     position: relative;
+    background-size: auto;
+    background-position: center;
+    background-attachment: scroll;
 
     color: white;
     margin-bottom: 50px;
