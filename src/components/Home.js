@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomePage.css';
 
-const Home = () => { // test
+const Home = () => { 
   return (
     <div className='bodyCenter'>
       <div className="top-container text-center">

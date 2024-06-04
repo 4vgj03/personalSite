@@ -209,11 +209,12 @@ p {
 @media (max-width: 768px) {
 
   .top-container {
-    background-image: url('../assets/images/korean-bridge-mobile.png'); /* Update the path and file extension as needed */
+    background-image: url('../assets/images/korean-bridge-mobile.jpg'); /* Update the path and file extension as needed */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 99%; /* Adjust the height as needed */
+    background-repeat: no-repeat; /* Ensure the background image is not repeated */
+    height: 100%; /* Adjust the height as needed */
   }
 
   .h1homepage {
