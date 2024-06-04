@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Resume.css';
 import DiamondResortsLogo from "../assets/images/drlogo4.png";
 import TomorrowEnergyLogo from "../assets/images/te-logo-3.png";
@@ -83,6 +83,11 @@ const Resume = () => {
   const workExperienceItems = resumeItems.filter(item => item.category === 'Work Experience');
   const educationItems = resumeItems.filter(item => item.category === 'Education');
   const certificateItems = resumeItems.filter(item => item.category === 'Certificates');
+
+  useEffect(() => {
+    // Scroll the page to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
   return (
     <div className="resume-page">
