@@ -209,7 +209,7 @@ p {
 @media (max-width: 768px) {
 
   .top-container {
-    background-image: url('../assets/images/korean-bridge-mobile.png'); /* Update the path and file extension as needed */
+    background-image: url('../assets/images/korean-bridge-2.png'); /* Update the path and file extension as needed */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
