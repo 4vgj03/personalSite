@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.home-page-container {
+.home-page-container .top-container {
   position: relative;
   background-image: url('../assets/images/korean-garden-bridge.jpg');
   background-size: cover;
@@ -206,7 +206,16 @@ p {
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 768px) {
+
+  .top-container {
+    background-image: url('../assets/images/korean-bridge-mobile.jpg'); /* Update the path and file extension as needed */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%; /* Adjust the height as needed */
+  }
+
   .h1homepage {
       font-size: 2.5rem;
   }
@@ -234,10 +243,5 @@ p {
     height: 38%;
     width: max-content;
     opacity: .7;
-  }
-
-  .top-container {
-    background-size: contain; /* Adjust the background size for mobile */
-    background-attachment: scroll; /* Remove fixed background for mobile */
   }
 }
