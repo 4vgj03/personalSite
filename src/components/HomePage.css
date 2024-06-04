@@ -64,6 +64,7 @@ h2 {
   padding-bottom: 10px;
 }
 
+
 .h2homepage {
   color: #fff;
   font: 2.5rem;
@@ -193,42 +194,37 @@ p {
 /* Media queries for mobile responsiveness */
 @media (max-width: 768px) {
   .h1homepage {
-    font-size: 3rem;
+      font-size: 3rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
 
   .middle-container {
-    margin-top: -1rem; /* Adjust margin for mobile view */
-  }
-
-  .home-page-container {
-    background-size: contain; /* Adjust the background size for mobile */
-    background-attachment: scroll; /* Remove fixed background for mobile */
+      margin-top: -1rem; /* Adjust margin for mobile view */
   }
 }
 
 @media (max-width: 780px) {
   .h1homepage {
-    font-size: 2.5rem;
+      font-size: 2.5rem;
   }
 
   h2 {
-    font-size: 1.25rem;
+      font-size: 1.25rem;
   }
 
   .intro {
-    width: 80%;
+      width: 80%;
   }
 
   .skill-row {
-    width: 90%;
+      width: 90%;
   }
 
   .contact-message {
-    width: 90%;
+      width: 90%;
   }
 
   .cloud-bottom {
@@ -240,7 +236,7 @@ p {
     opacity: .7;
   }
 
-  .home-page-container {
+  .top-container {
     background-size: contain; /* Adjust the background size for mobile */
     background-attachment: scroll; /* Remove fixed background for mobile */
   }
