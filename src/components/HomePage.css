@@ -245,7 +245,7 @@ p {
   .top-container {
     position: relative;
     background-size: auto;
-    background-position: center;
+    background-position: top;
     background-attachment: scroll;
     background-image: url('../assets/images/korean-bridge-mobile-2.png');
     color: white;
