@@ -64,7 +64,6 @@ h2 {
   padding-bottom: 10px;
 }
 
-
 .h2homepage {
   color: #fff;
   font: 2.5rem;
@@ -194,49 +193,42 @@ p {
 /* Media queries for mobile responsiveness */
 @media (max-width: 768px) {
   .h1homepage {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 
   h2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .middle-container {
-      margin-top: -1rem; /* Adjust margin for mobile view */
+    margin-top: -1rem; /* Adjust margin for mobile view */
+  }
+
+  .home-page-container {
+    background-size: contain; /* Adjust the background size for mobile */
+    background-attachment: scroll; /* Remove fixed background for mobile */
   }
 }
 
-@media (max-width: 768px) {
-
-  .top-container {
-    position: relative;
-    background-image: url('../assets/images/korean-bridge-mobile.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh; /* Adjust the height to cover the entire viewport height */
-    color: white;
-    margin-bottom: 50px;
-  }
-
+@media (max-width: 780px) {
   .h1homepage {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   h2 {
-      font-size: 1.25rem;
+    font-size: 1.25rem;
   }
 
   .intro {
-      width: 80%;
+    width: 80%;
   }
 
   .skill-row {
-      width: 90%;
+    width: 90%;
   }
 
   .contact-message {
-      width: 90%;
+    width: 90%;
   }
 
   .cloud-bottom {
@@ -246,5 +238,10 @@ p {
     height: 38%;
     width: max-content;
     opacity: .7;
+  }
+
+  .top-container {
+    background-size: contain; /* Adjust the background size for mobile */
+    background-attachment: scroll; /* Remove fixed background for mobile */
   }
 }
