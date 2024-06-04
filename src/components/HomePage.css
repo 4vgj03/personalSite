@@ -243,8 +243,8 @@ p {
 
 
   .top-container {
-    position: relative;
-    background-size: contain;
+    position: absolute;
+    background-size: auto;
     background-position: center;
     background-attachment: scroll;
     height: 100vh; /* Adjust the height to cover the entire viewport height */
