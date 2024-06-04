@@ -206,7 +206,7 @@ p {
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 768px) {
 
   .top-container {
     position: relative;
