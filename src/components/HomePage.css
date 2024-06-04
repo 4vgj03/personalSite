@@ -240,8 +240,15 @@ p {
     opacity: .7;
   }
 
+
+
   .top-container {
-    background-size: contain; /* Adjust the background size for mobile */
-    background-attachment: scroll; /* Remove fixed background for mobile */
+    position: relative;
+    background-size: contain;
+    background-position: center;
+    background-attachment: scroll;
+    height: 100vh; /* Adjust the height to cover the entire viewport height */
+    color: white;
+    margin-bottom: 50px;
   }
 }
