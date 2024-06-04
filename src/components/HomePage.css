@@ -9,7 +9,7 @@
 
 .home-page-container {
   position: relative;
-  background-image: url('../assets/images/korean-garden-bridge.jpg');
+  background-image: url('../assets/images/korean-garden-bridge-3.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -180,7 +180,7 @@ p {
 
 .top-container {
   position: relative;
-  background-image: url('../assets/images/korean-bridge-2.png'); /* Ensure background image is applied */
+  background-image: url('../assets/images/korean-garden-bridge-3.png'); /* Ensure background image is applied */
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the image */
   background-attachment: fixed; /* Fixed background attachment */
@@ -247,7 +247,7 @@ p {
     background-size: auto;
     background-position: top;
     background-attachment: scroll;
-    background-image: url('../assets/images/korean-bridge-mobile-2.png');
+    background-image: url('../assets/images/korean-bridge-mobile-3.png');
     color: white;
     margin-bottom: 50px;
   }
