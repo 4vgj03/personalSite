@@ -51,18 +51,19 @@ html, body {
     padding: 10px;
   }
 
+  /* Fix for mobile background */
   body {
-    background-image: url('assets/images/marble-background-mobile.png');
-    background-size: cover;
-    background-attachment: scroll; /* Use scroll instead of fixed */
-    background-repeat: no-repeat;
-    background-position: center;
+    background: none;
+    position: relative;
   }
 
-  /* Optional: you can add a solid color background as a fallback */
   body::before {
     content: "";
-    background-color: #f0f0f0; /* Adjust this color as needed */
+    background-image: url('assets/images/marble-background-3.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
     position: fixed;
     top: 0;
     left: 0;
