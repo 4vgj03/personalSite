@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header'; // Import Header from separate file
+import Header from './components/Header';
 import Home from './components/Home';
 import Resume from './components/Resume';
-import ProjectList from './components/ProjectList'; // Import ProjectList component
-import BandGenerator from './projects/bandgenerator/BandGenerator'
+import ProjectList from './components/ProjectList';
+import BandGenerator from './projects/bandgenerator/BandGenerator';
 import WeatherApp from './projects/weatherapp/weatherApp';
+import SimonGame from './projects/simongame/simongame';
 import Contact from './components/Contact';
 import Contacttest from './components/Contacttest';
 import './App.css';
@@ -15,18 +16,19 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header /> {/* Render the Header component */}
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<ProjectList />} />
           <Route path="/projects/bandgenerator" element={<BandGenerator />} />
           <Route path="/projects/weatherapp" element={<WeatherApp />} />
+          <Route path="/projects/simongame" element={<SimonGame />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/contacttest" element={<Contacttest />} />
           <Route path="*" element={<Home />} />
         </Routes>
-        <BottomContainer /> {/* Render the Footer component */}
+        <BottomContainer />
       </div>
     </Router>
   );

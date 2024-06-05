@@ -6,6 +6,7 @@ import './ProjectList.css';
 import bandGeneratorImage from '../../src/assets/images/band-name-generator.png';
 import toDoListImage from '../../src/assets/images/todo-list-3.png';
 import weatherAppImage from '../../src/assets/images/weather-3.png';
+import simonGameImage from '../../src/assets/images/weather-3.png';
 
 const projects = [
   {
@@ -19,14 +20,14 @@ const projects = [
     link: '/projects/to-do-list',
   },
   {
-    title: 'Weather',
+    title: 'Weather App',
     imageUrl: weatherAppImage,
     link: '/projects/weatherapp',
   },
   {
-    title: 'Weather 2',
-    imageUrl: weatherAppImage,
-    link: '/projects/weatherapp',
+    title: 'Simon Game',
+    imageUrl: simonGameImage,
+    link: '/projects/simongame',
   },
   // Add more projects here
 ];
