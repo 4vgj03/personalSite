@@ -7,35 +7,37 @@ const Home = () => {
       <div className="top-container text-center">
         {/* <img className="cloud-top img-fluid" src="/images/floating-clouds.gif" alt="cloudimage" /> */}
         <h1 className="h1homepage">hi, I'm Joe</h1>
-        <h2 className="h2homepage">I like to code</h2>
+        <h2 className="h2homepage">Welcome to my neck of the woods!</h2>
         {/* <img className="mountain img-fluid" src="/images/mountains.jpg" alt="mountainimage" /> */}
         {/* <img className="cloud-bottom img-fluid" src="/images/floating-clouds-2.gif" alt="cloudimage" /> */}
       </div>
       <div className="middle-container">
         <div className="profile">
           <img className="profile-pic img-fluid" src="/images/profile-pic.png" alt="profile" />
-          <h2>Hello.</h2>
-          <p className="intro">Lorem ipsum dolor sit amet, vitae volutpat, dui conubia, dolor urna. Non auctor, montes nulla distinctio.</p>
+          <h2>I'm glad you stopped by!</h2>
+          <p className="intro">This site was built using React JS and is 100% custom built.</p>
+          <p className="intro">Look around, play around, stick around.</p>
         </div>
         <hr />
         <div className="skills">
-          <h2>My Skills.</h2>
+          <h2>What keeps me moving.</h2>
           <div className="skill-row">
             <img className="skillImage img-fluid" src="/images/shark.gif" alt="skill" />
-            <h3 className="customhthree">Lorem & Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, quis in duis, iaculis id felis. Consectetuer vestibulum, nunc urna lectus, erat ligula. Hendrerit nam, lectus ante, ut lorem eros.</p>
+            <h3 className="customhthree">Constantly Learning</h3>
+            <p>There's a lot to learn and a lot to do. Staying on the move is key to helping me learn new skills and experience new joys. Don't take things <strong>too</strong> seriously</p>
           </div>
           <div className="skill-row">
             <img className="skillImage2 img-fluid" src="/images/skill.gif" alt="skill" />
-            <h3 className="customhthree">Lorem Ipsum Dolor</h3>
-            <p>Lorem ipsum dolor sit amet, mauris sed consectetuer. Etiam et eu, bibendum interdum, lacus quis mauris. Curabitur wisi, quisque vel eu, rutrum nam.</p>
+            <h3 className="customhthree">Staying Balanced</h3>
+            <p>Life is all about balance. I enjoy learning but there is a need for a balance: learn, have fun, and enjoy this short time we're on this pale blue dot.</p>
           </div>
         </div>
         <hr />
         <div className="contact-me">
-          <h2>Get In Touch</h2>
-          <h3>Lorem ipsum dolor sit amet, non elit.</h3>
-          <p className="contact-message">Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales, tellus donec dui, ornare erat.</p>
+          <h2>Let's stay in touch!</h2>
+          {/* <h3>Want to discuss tech, nature, food, travel?</h3> */}
+          <p className="contact-message">Want to discuss tech, nature, food, travel?</p>
+          <p className="contact-message">Drop a line.</p>
           <a className="btn ahrefcustom" href="/contact">CONTACT ME</a>
         </div>
       </div>

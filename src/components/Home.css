@@ -24,7 +24,7 @@
   color: white; /* Ensure text is readable on the background */
 }
 
-.cloud-top, .cloud-bottom, .mountain, .profile-pic, .skillImage, .skillImage2 {
+.cloud-top, .cloud-bottom, .mountain, .profile-pic, .Image, .skillImage2 .skillImage {
   width: 100%;
   max-width: 200px; /* Adjust max-width for better visibility */
   height: auto;

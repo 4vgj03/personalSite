@@ -140,7 +140,7 @@ p {
 }
 
 .contact-message {
-  margin: 40px auto 60px;
+  margin: 0px auto 20px;
   width: 40%;
 }
 
@@ -162,7 +162,7 @@ p {
 .skillImage {
   float: left;
   margin-right: 30px;
-  width: 15%;
+  width: 20%;
 }
 
 .skillImage2 {

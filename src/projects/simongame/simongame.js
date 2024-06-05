@@ -10,6 +10,9 @@ let level = 0;
 
 const SimonGame = () => {
   useEffect(() => {
+    // Scroll to the top of the page on load
+    window.scrollTo(0, 0);
+
     const handleKeyPress = (event) => {
       if (!started) {
         $("#level-title").text("Level " + level);
@@ -33,13 +36,18 @@ const SimonGame = () => {
           userChosenColorTemp = "blue";
           break;
         default:
-          break;
+          console.error("Invalid key pressed:", event.key);
+          return; // Exit the function if an invalid key is pressed
       }
 
-      playSound(userChosenColorTemp);
-      animatePress(userChosenColorTemp);
-      userClickedPattern.push(userChosenColorTemp);
-      checkAnswer(userClickedPattern.length - 1);
+      if (userChosenColorTemp) {
+        playSound(userChosenColorTemp);
+        animatePress(userChosenColorTemp);
+        userClickedPattern.push(userChosenColorTemp);
+        checkAnswer(userClickedPattern.length - 1);
+      } else {
+        console.error("Invalid color selected from key press:", userChosenColorTemp);
+      }
     };
 
     document.addEventListener("keydown", handleKeyPress);
@@ -69,7 +77,7 @@ const SimonGame = () => {
   };
 
   const animatePress = (currentColor) => {
-    if (currentColor) {
+    if (currentColor && $("#" + currentColor).length) {
       $("#" + currentColor).addClass("pressed");
       setTimeout(() => {
         $("#" + currentColor).removeClass("pressed");
@@ -78,7 +86,6 @@ const SimonGame = () => {
       console.error("Invalid color:", currentColor);
     }
   };
-  
 
   const checkAnswer = (currentLevel) => {
     if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
@@ -117,11 +124,14 @@ const SimonGame = () => {
       return;
     }
 
-    userClickedPattern.push(color);
-
-    playSound(color);
-    animatePress(color);
-    checkAnswer(userClickedPattern.length - 1);
+    if (color) {
+      userClickedPattern.push(color);
+      playSound(color);
+      animatePress(color);
+      checkAnswer(userClickedPattern.length - 1);
+    } else {
+      console.error("Invalid color on button click:", color);
+    }
   };
 
   return (
@@ -139,7 +149,6 @@ const SimonGame = () => {
       </div>
     </div>
   );
-  
 };
 
 export default SimonGame;

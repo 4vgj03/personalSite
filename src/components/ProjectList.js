@@ -6,7 +6,7 @@ import './ProjectList.css';
 import bandGeneratorImage from '../../src/assets/images/band-name-generator.png';
 import toDoListImage from '../../src/assets/images/todo-list-3.png';
 import weatherAppImage from '../../src/assets/images/weather-3.png';
-import simonGameImage from '../../src/assets/images/weather-3.png';
+import simonGameImage from '../../src/assets/images/simon-says-2.png';
 
 const projects = [
   {
