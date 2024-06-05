@@ -29,7 +29,7 @@ const Home = () => {
           <div className="skill-row">
             <img className="skillImage2 img-fluid" src="/images/skill.gif" alt="skill" />
             <h3 className="customhthree">Staying Balanced</h3>
-            <p>Life is all about balance. I enjoy learning but there is a need for a balance: learn, have fun, and enjoy this short time we're on this pale blue dot.</p>
+            <p>Life is all about balance. I enjoy learning but there is a need for a balance: learn, have fun, and enjoy this short time we're on this pale blue dot</p>
           </div>
         </div>
         <hr />
