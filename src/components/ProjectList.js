@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ProjectList.css';
 
@@ -33,6 +33,10 @@ const projects = [
 ];
 
 const ProjectList = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
+
   return (
     <div className="projects-container">
       <h1 className="header-projects">Projects</h1>

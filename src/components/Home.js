@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './HomePage.css';
 
-const Home = () => { 
+const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
+
   return (
     <div className='bodyCenter'>
       <div className="top-container text-center">
