@@ -5,6 +5,15 @@ body, html {
   margin: 0;
 }
 
+h2Resume {
+  color: #66BFBF;
+  text-align: center;
+  font: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
 .resume-page {
   display: flex;
   flex-direction: column;

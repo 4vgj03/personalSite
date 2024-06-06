@@ -20,7 +20,7 @@ const BandGenerator = () => {
       <div className="band-generator-container">
         <h1>Band Name Generator</h1>
         <button className='band-button' onClick={generateBandName}>Generate Band Name</button>
-        <p>Band Name: {adjective} {noun}</p>
+        <p className='pBand'>Band Name: {adjective} {noun}</p>
       </div>
     </div>
   );

@@ -64,7 +64,7 @@ const Resume = () => {
 
     return (
       <div className="resume-section">
-        <h2>{title}</h2>
+        <h2 className='h2Resume'>{title}</h2>
         {filteredItemsInSection.map((item, index) => (
           <div key={index} className="resume-item">
             <img src={item.logo} alt="Logo" className="job-logo" />
