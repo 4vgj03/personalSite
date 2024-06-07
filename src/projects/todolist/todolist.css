@@ -207,7 +207,7 @@ body, html, #root {
 
 @media (max-width: 480px) {
   .note {
-    width: 100%;
+    width: 75%;
   }
   
   form.create-note {
