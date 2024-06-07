@@ -153,8 +153,8 @@ body, html, #root {
   width: 100%;
   background: none;
   position: relative;
-  right: -43px;
-  bottom: -26px;
+  /* right: -43px;
+  bottom: -26px; */
 }
 
 .button-image-add {
