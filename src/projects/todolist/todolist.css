@@ -163,8 +163,8 @@ body, html, #root {
 
 .button-add {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 13px;
+  bottom: 12px;
   background: none;
   color: #000;
   border: none;

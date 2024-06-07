@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import '../App.css'; // Ensure the global CSS is imported
 import './ContactForm.css';
-
+import marbleEmail from '../assets/images/marbleemail.png'; // Import the image
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,7 +23,7 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          setCountdown(5); // Start the countdown timer
+          setCountdown(5); // Start the countdown timer with 5 seconds
           setIsSubmitting(false);
         },
         (error) => {
@@ -38,7 +38,7 @@ const ContactForm = () => {
 
   useEffect(() => {
     if (countdown !== null && countdown > 0) {
-      setStateMessage(`Message sent! Taking you home in ${countdown} seconds.`);
+      setStateMessage(`Thank you for your message!\nTaking you home in ${countdown} seconds.`);
       const timer = setTimeout(() => {
         setCountdown(countdown - 1);
       }, 1000);
@@ -51,19 +51,31 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form-wrapper">
-      <p className="contact-heading">5/23/2024 v1</p>
-      <form onSubmit={sendEmail} className="contact-form">
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" disabled={isSubmitting} />
-        {stateMessage && (
-          <p>{stateMessage}</p>
-        )}
-      </form>
+      
+      {countdown === null ? (
+        <>
+        <p className="contact-heading">5/23/2024 v1</p>
+        <form onSubmit={sendEmail} className="contact-form">
+          <label>Name</label>
+          <input type="text" name="user_name" />
+          <label>Email</label>
+          <input type="email" name="user_email" />
+          <label>Message</label>
+          <textarea name="message" />
+          <input type="submit" value="Send" disabled={isSubmitting} />
+          {stateMessage && (
+            <p>{stateMessage}</p>
+          )}
+        </form>
+        </>
+      ) : (
+        <div className="countdown-container">
+          <div className="contact-image-container">
+            <img src={marbleEmail} alt="Marble Email" className="contact-image" />
+          </div>
+          <p className='state-message'>{stateMessage}</p>
+        </div>
+      )}
     </div>
   );
 };
