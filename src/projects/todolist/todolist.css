@@ -199,15 +199,15 @@ body, html, #root {
     width: 180%;
     background: none;
     position: relative;
-    right: -25px;
-    bottom: -20px;
+    right: 0px;
+    bottom: 0px;
   }
   
 }
 
 @media (max-width: 480px) {
   .note {
-    width: 75%;
+    width: 100%;
   }
   
   form.create-note {
@@ -223,7 +223,7 @@ body, html, #root {
     width: 180%;
     background: none;
     position: relative;
-    right: -25px;
-    bottom: -20px;
+    right: 0px;
+    bottom: 0px;
   }
 }
