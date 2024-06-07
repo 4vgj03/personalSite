@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Note from "./Noteold";
 import CreateArea from "./CreateAreaOLD";
 import './todolist.css'; // Importing CSS styles
 
 function Todolist() {
   const [notes, setNotes] = useState([]);
+
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo(0, 0);
+  }, []);
 
   function addNote(newNote) {
     setNotes(prevNotes => {

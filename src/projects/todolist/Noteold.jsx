@@ -10,7 +10,7 @@ import DeleteIcon from "./images/deletemarbleicon.png";
       <div className="note">
         <h1>{props.title}</h1>
         <p>{props.content}</p>
-        <button onClick={handleClick}><img className="button-image" src={DeleteIcon} alt = "DeleteTest" /></button>
+        <button onClick={handleClick}><img className="button-image-delete" src={DeleteIcon} alt = "DeleteTest" /></button>
       </div>
     );
   }
