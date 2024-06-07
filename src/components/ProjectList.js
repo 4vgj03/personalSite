@@ -17,7 +17,7 @@ const projects = [
   {
     title: 'To Do List',
     imageUrl: toDoListImage,
-    link: '/projects/to-do-list',
+    link: '/projects/todolist',
   },
   {
     title: 'Weather App',

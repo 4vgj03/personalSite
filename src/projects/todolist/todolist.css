@@ -1,0 +1,229 @@
+/* General styles for the todo list page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.todolist-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.todolist-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  color: #ccc;
+}
+
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  background-color: #fff;
+  float: right;
+  margin-right: 10px;
+  color: #000;
+  border: none;
+  width: 50px;
+  cursor: pointer;
+  outline: none;
+}
+
+form.create-note {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+form.create-note button {
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  background: none;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); */
+  cursor: pointer;
+  outline: none;
+}
+
+body, html, #root {
+  height: 100%;
+}
+
+.todolist-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.todolist-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.bottom-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  position: static;
+  width: 100%;
+  margin-top: auto;
+}
+
+.button-image {
+  /* height: 100%; */
+  width: 100%;
+  background: none;
+  position: relative;
+  right: -30px;
+  bottom: -20px;
+}
+
+.button-image-add {
+  height: 100%;
+}
+
+.button-add {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: none;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .note {
+    width: 80%;
+  }
+
+  form.create-note {
+    width: 90%;
+  }
+
+  .notes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .note button {
+    width: 36px;
+    height: 36px;
+  }
+  .button-image {
+    /* height: 100%; */
+    width: 180%;
+    background: none;
+    position: relative;
+    right: -28px;
+    bottom: -20px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .note {
+    width: 100%;
+  }
+  
+  form.create-note {
+    width: 95%;
+  }
+  
+  .note button {
+    width: 30px;
+    height: 30px;
+  }
+  .button-image {
+    /* height: 100%; */
+    width: 180%;
+    background: none;
+    position: relative;
+    right: -28px;
+    bottom: -20px;
+  }
+}

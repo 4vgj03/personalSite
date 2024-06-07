@@ -7,6 +7,8 @@ import ProjectList from './components/ProjectList';
 import BandGenerator from './projects/bandgenerator/BandGenerator';
 import WeatherApp from './projects/weatherapp/weatherApp';
 import SimonGame from './projects/simongame/simongame';
+// import Todolist from './components/todolist';
+import Todolist from './projects/todolist/todolist'
 import Contact from './components/Contact';
 import Contacttest from './components/Contacttest';
 import './App.css';
@@ -24,6 +26,7 @@ function App() {
           <Route path="/projects/bandgenerator" element={<BandGenerator />} />
           <Route path="/projects/weatherapp" element={<WeatherApp />} />
           <Route path="/projects/simongame" element={<SimonGame />} />
+          <Route path="/projects/todolist" element={<Todolist />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/contacttest" element={<Contacttest />} />
           <Route path="*" element={<Home />} />
