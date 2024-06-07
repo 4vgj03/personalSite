@@ -223,7 +223,7 @@ body, html, #root {
     width: 90%;
     background: none;
     position: relative;
-    right: -25px;
-    bottom: -20px;
+    right: 0px;
+    bottom: 0px;
   }
 }
