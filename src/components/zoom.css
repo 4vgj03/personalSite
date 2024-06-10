@@ -4,41 +4,29 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); /* Center the dialog */
-    z-index: 4;
+    z-index:4;
     background-color: black;
-    padding: 10px; /* Added padding for better appearance */
-    max-width: 90%; /* Ensure the dialog doesn't exceed the viewport width */
-    max-height: 90%; /* Ensure the dialog doesn't exceed the viewport height */
-    overflow: hidden; /* Hide overflow if the content is too large */
+  }
+
+  .dialog:hover {
+    box-shadow: 0 8px 6px -6px black;
+    position: fixed; /* Change position to fixed */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center the dialog */
+    z-index:4;
+    background-color: black;
   }
   
   .imageOpen {
-    width: 100%; /* Make the image take up the full width of the dialog */
-    max-width: 800px; /* Maximum width */
-    cursor: zoom-out;
+    width: 800px;
     z-index: 20;
+    cursor: zoom-out;
   }
   
   .small {
-    width: 100%; /* Make the image responsive */
-    max-width: 300px; /* Maximum width */
+    width: 300px;
+    z-index:10;
     cursor: zoom-in;
-    z-index: 10;
-  }
-  
-  @media (max-width: 768px) {
-    .dialog {
-      max-width: 95%; /* Reduce max-width for smaller screens */
-      max-height: 95%; /* Reduce max-height for smaller screens */
-    }
-  
-    .imageOpen {
-      max-width: 95%; /* Reduce max-width for smaller screens */
-      max-height: 95%; /* Reduce max-height for smaller screens */
-    }
-  
-    .small {
-      max-width: 95%; /* Reduce max-width for smaller screens */
-    }
   }
   
