@@ -8,6 +8,32 @@
     margin-top: 20px; /* Add some margin to move it down from the top */
   }
   
+  .h1contact {
+    color: #000;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.625rem;
+    font-style: italic;
+    margin-bottom: 25px;
+    /* text-shadow: -1px 2px 0 #000,
+    1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000; */
+  }
+
+  .form-label{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2rem;
+  }
+
+  .form-input{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2rem;
+  }
+  
   /* Styles for the <p> tag */
   .contact-heading {
     text-align: center; /* Center align the text */
@@ -40,24 +66,35 @@
     border-radius: 5px;
     transition: border-color 0.3s, box-shadow 0.3s;
     box-sizing: border-box; /* Ensure padding is included in the width calculation */
-    font-size: 14px; /* Adjust font size */
+    font-size: 18px; /* Adjust font size */
   }
   
   .contact-form input[type="submit"] {
     width: 100%; /* Take up full width */
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #000;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    background: linear-gradient(300deg, #000000, #4d4a4a, #000000);
+    background-size: 200% 200%;
+    animation: gradient-animation 18s ease infinite;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
   }
   
   .contact-form input[type="submit"]:hover {
-    background-color: #0056b3;
+    background: linear-gradient(300deg, #18e905, #56ac20, #18e905);
+    background-size: 200% 200%;
+    animation: gradient-animation 18s ease infinite;
   }
   
+  submit-btn{
+    font-family: 'Dancing Script', cursive;
+  }
+
   .contact-form input[type="submit"]:disabled {
     background-color: #ccc;
     cursor: not-allowed;

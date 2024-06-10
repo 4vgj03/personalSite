@@ -1,11 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
+import Zoom from 'react-medium-image-zoom';
+// import { Controlled as ControlledZoom } from 'react-medium-image-zoom';
+// import './reactimagestyles.css';
 import './Resume.css';
 import DiamondResortsLogo from "../assets/images/drlogo4.png";
 import TomorrowEnergyLogo from "../assets/images/te-logo-3.png";
 import SimpsonCollegeLogo from "../assets/images/simpson-icon.ico";
 import Web2024Logo from "../assets/images/web2024v1.png";
+import WebCert from "../assets/images/2024-web-3-bootcamp-certificate-of-completion.jpg";
+import PMPCert from "../assets/images/PMP-Cert-JMather-2023.png";
+import Image from './zoom';
 
 const Resume = () => {
+
+  const [isZoomed, setIsZoomed] = useState(false);
+  const handleZoomChange = useCallback(shouldZoom => {
+    setIsZoomed(shouldZoom);
+  }, []);
+
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredItems, setFilteredItems] = useState(resumeItems);
 
@@ -61,33 +73,50 @@ const Resume = () => {
     if (filteredItemsInSection.length === 0) {
       return null;
     }
-
+  
     return (
       <div className="resume-section">
+      {/* <Image /> */}
         <h2 className='h2Resume'>{title}</h2>
-        {filteredItemsInSection.map((item, index) => (
-          <div key={index} className="resume-item">
-            <img src={item.logo} alt="Logo" className="job-logo" />
-            <h3>{item.title}</h3>
-            <p className="company">
-              <a href={item.companyLink}>{item.companyName}</a> | {item.location}
-            </p>
-            <p className="years">{item.years}</p>
-            <div className="description">{item.description}</div>
-          </div>
-        ))}
+        {filteredItemsInSection.map((item, index) => {
+          // Filter out items that are not of the specified category
+          if (item.category !== title) {
+            return null;
+          }
+          return (
+            <div key={index} className="resume-item">
+              <img src={item.logo} alt="Logo" className="job-logo" />
+              <h3>{item.title}</h3>
+              <p className="company">
+                <a href={item.companyLink}>{item.companyName}</a> | {item.location}
+              </p>
+              <p className="years">{item.years}</p>
+              <div className="description">{item.description}</div>
+              {/* Include Zoom component for certificates */}
+              {title === 'Certificates' && item.title === 'The Complete 2024 Web Development Bootcamp' && (
+                <Image
+                  src={WebCert}
+                  alt="Web Development Bootcamp Certificate"
+                />
+              )}
+              {title === 'Certificates' && item.title === 'PMP' && (
+                <Image
+                  src={PMPCert}
+                  alt="PMP Certificate"
+                />
+)}              
+            </div>
+          );
+        })}
       </div>
     );
   };
+  
+  
 
   const workExperienceItems = resumeItems.filter(item => item.category === 'Work Experience');
   const educationItems = resumeItems.filter(item => item.category === 'Education');
   const certificateItems = resumeItems.filter(item => item.category === 'Certificates');
-
-  useEffect(() => {
-    // Scroll the page to the top when the component mounts
-    window.scrollTo(0, 0);
-  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
   return (
     <div className="resume-page">
@@ -108,7 +137,6 @@ const Resume = () => {
     </div>
   );
 };
-
 const resumeItems = [
   {
     category: 'Work Experience',
@@ -159,7 +187,7 @@ const resumeItems = [
   // Add education items
   {
     category: 'Education',
-    title: 'Bachelor of Science in Computer Science',
+    title: 'Bachelor of Science in Computer Information Systems and Business Management (Finance and Insurance)',
     companyName: 'Simpson College',
     location: 'Indianola, IA',
     companyLink: 'https://simpson.edu/',
@@ -184,10 +212,28 @@ const resumeItems = [
       <ul>
         <li>Earned certification demonstrating proficiency in JavaScript programming and best practices.</li>
       </ul>
+      // <img src= {WebCert}></img>
+    ),
+    keywords: ['javascript', 'certificate', '2024'],
+    logo: Web2024Logo,
+  },
+  {
+    category: 'Certificates',
+    title: 'PMP',
+    companyName: 'PMI',
+    location: 'Online',
+    companyLink: 'https://www.udemy.com/course/the-complete-web-development-bootcamp',
+    years: '2023',
+    description: (
+      <ul>
+        <li>PMP Items</li>
+      </ul>
+      // <img src= {WebCert}></img>
     ),
     keywords: ['javascript', 'certificate', '2024'],
     logo: Web2024Logo,
   },
 ];
+
 
 export default Resume;

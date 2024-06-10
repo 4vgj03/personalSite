@@ -54,15 +54,15 @@ const ContactForm = () => {
       
       {countdown === null ? (
         <>
-        <p className="contact-heading">5/23/2024 v1</p>
+        <h1 className='h1contact'>Let's get in contact!</h1>
         <form onSubmit={sendEmail} className="contact-form">
-          <label>Name</label>
+          <label className='form-label'>Name</label>
           <input type="text" name="user_name" />
-          <label>Email</label>
+          <label className='form-label'>Email</label>
           <input type="email" name="user_email" />
-          <label>Message</label>
+          <label className='form-label'>Message</label>
           <textarea name="message" />
-          <input type="submit" value="Send" disabled={isSubmitting} />
+          <input type="submit" value="Send" className='submit-btn' disabled={isSubmitting} />
           {stateMessage && (
             <p>{stateMessage}</p>
           )}

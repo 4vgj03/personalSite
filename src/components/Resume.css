@@ -28,6 +28,10 @@ h2Resume {
   flex: 1; /* Take up remaining space */
 }
 
+/* .resume-section{
+  z-index: -1;
+} */
+
 .search-bar {
   width: 100%;
   padding: 10px;
@@ -87,7 +91,7 @@ h2Resume {
   border-radius: 50%; /* Optional: makes the logo circular */
   /* Position the logo relative to its parent (.resume-item) */
   position: absolute;
-  z-index: 1;
+  z-index: 0;
 }
 
 .menu {

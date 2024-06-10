@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap is imported
 import './TopContainer.css';
+import './reactimagestyles.css';
 
 const TopContainer = () => {
   return (
