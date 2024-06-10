@@ -197,7 +197,7 @@ const resumeItems = [
         <li>Completed coursework in software development, algorithms, data structures, and computer systems.</li>
       </ul>
     ),
-    keywords: ['computer science', 'university', 'bachelor', '2010', '2011', '2012', '2013', '2014'],
+    keywords: ['computer science', 'university', 'bachelor', '2006','2007','2008','2009','2010','2011'],
     logo: SimpsonCollegeLogo,
   },
   // Add certificate items
@@ -230,7 +230,7 @@ const resumeItems = [
       </ul>
       // <img src= {WebCert}></img>
     ),
-    keywords: ['javascript', 'certificate', '2024'],
+    keywords: ['javascript', 'certificate','2020','2021','2022','2023', '2024'],
     logo: Web2024Logo,
   },
 ];
