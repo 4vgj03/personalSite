@@ -1,7 +1,5 @@
-import React, { useState, useCallback } from 'react';
-import Zoom from 'react-medium-image-zoom';
-// import { Controlled as ControlledZoom } from 'react-medium-image-zoom';
-// import './reactimagestyles.css';
+import React, { useState } from 'react';
+import Image from "react-image-enlarger";
 import './Resume.css';
 import DiamondResortsLogo from "../assets/images/drlogo4.png";
 import TomorrowEnergyLogo from "../assets/images/te-logo-3.png";
@@ -9,14 +7,17 @@ import SimpsonCollegeLogo from "../assets/images/simpson-icon.ico";
 import Web2024Logo from "../assets/images/web2024v1.png";
 import WebCert from "../assets/images/2024-web-3-bootcamp-certificate-of-completion.jpg";
 import PMPCert from "../assets/images/PMP-Cert-JMather-2023.png";
-import Image from './zoom';
 
 const Resume = () => {
+  const [zoomedImage, setZoomedImage] = useState(null); // Track which image is zoomed
 
-  const [isZoomed, setIsZoomed] = useState(false);
-  const handleZoomChange = useCallback(shouldZoom => {
-    setIsZoomed(shouldZoom);
-  }, []);
+  const handleZoom = (image) => {
+    setZoomedImage(image);
+  };
+
+  const handleRequestClose = () => {
+    setZoomedImage(null);
+  };
 
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredItems, setFilteredItems] = useState(resumeItems);
@@ -73,13 +74,11 @@ const Resume = () => {
     if (filteredItemsInSection.length === 0) {
       return null;
     }
-  
+
     return (
       <div className="resume-section">
-      {/* <Image /> */}
         <h2 className='h2Resume'>{title}</h2>
         {filteredItemsInSection.map((item, index) => {
-          // Filter out items that are not of the specified category
           if (item.category !== title) {
             return null;
           }
@@ -92,27 +91,32 @@ const Resume = () => {
               </p>
               <p className="years">{item.years}</p>
               <div className="description">{item.description}</div>
-              {/* Include Zoom component for certificates */}
               {title === 'Certificates' && item.title === 'The Complete 2024 Web Development Bootcamp' && (
                 <Image
+                  style={{ width: "100%", height: "auto", textAlign: "center" }}
+                  zoomed={zoomedImage === WebCert}
                   src={WebCert}
-                  alt="Web Development Bootcamp Certificate"
+                  alt="Web Development Certificate"
+                  onClick={() => handleZoom(WebCert)}
+                  onRequestClose={handleRequestClose}
                 />
               )}
               {title === 'Certificates' && item.title === 'PMP' && (
                 <Image
+                  style={{ width: "100%", height: "auto", textAlign: "center" }}
+                  zoomed={zoomedImage === PMPCert}
                   src={PMPCert}
                   alt="PMP Certificate"
+                  onClick={() => handleZoom(PMPCert)}
+                  onRequestClose={handleRequestClose}
                 />
-)}              
+              )}
             </div>
           );
         })}
       </div>
     );
   };
-  
-  
 
   const workExperienceItems = resumeItems.filter(item => item.category === 'Work Experience');
   const educationItems = resumeItems.filter(item => item.category === 'Education');
@@ -134,9 +138,20 @@ const Resume = () => {
           {renderSection('Education', educationItems)}
         </div>
       </div>
+      {/* Conditionally render enlarged image */}
+      {zoomedImage && (
+        <Image
+          style={{ width: "100%", height: "auto", textAlign: "center" }}
+          zoomed={true}
+          src={zoomedImage}
+          alt="Enlarged Image"
+          onRequestClose={handleRequestClose}
+        />
+      )}
     </div>
   );
 };
+
 const resumeItems = [
   {
     category: 'Work Experience',
@@ -184,7 +199,6 @@ const resumeItems = [
     keywords: ['leadership', 'javascript', 'react','2014','2015','2016'],
     logo: DiamondResortsLogo,
   },
-  // Add education items
   {
     category: 'Education',
     title: 'Bachelor of Science in Computer Information Systems and Business Management (Finance and Insurance)',
@@ -200,7 +214,6 @@ const resumeItems = [
     keywords: ['computer science', 'university', 'bachelor', '2006','2007','2008','2009','2010','2011'],
     logo: SimpsonCollegeLogo,
   },
-  // Add certificate items
   {
     category: 'Certificates',
     title: 'The Complete 2024 Web Development Bootcamp',
@@ -212,7 +225,6 @@ const resumeItems = [
       <ul>
         <li>Earned certification demonstrating proficiency in JavaScript programming and best practices.</li>
       </ul>
-      // <img src= {WebCert}></img>
     ),
     keywords: ['javascript', 'certificate', '2024'],
     logo: Web2024Logo,
@@ -228,12 +240,10 @@ const resumeItems = [
       <ul>
         <li>PMP Items</li>
       </ul>
-      // <img src= {WebCert}></img>
     ),
     keywords: ['javascript', 'certificate','2020','2021','2022','2023', '2024'],
     logo: Web2024Logo,
   },
 ];
-
 
 export default Resume;
