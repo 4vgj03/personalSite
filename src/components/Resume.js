@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Image from "react-image-enlarger";
 import './Resume.css';
 import DiamondResortsLogo from "../assets/images/drlogo4.png";
 import TomorrowEnergyLogo from "../assets/images/te-logo-3.png";
