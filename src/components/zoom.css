@@ -21,12 +21,12 @@
   .imageOpen {
     width: 800px;
     z-index: 20;
-    cursor: zoom-out;
+    /* cursor: zoom-out; */
   }
   
   .small {
     width: 300px;
     z-index:10;
-    cursor: zoom-in;
+    /* cursor: zoom-in; */
   }
   
