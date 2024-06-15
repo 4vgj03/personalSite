@@ -100,7 +100,7 @@ const Resume = () => {
               <p className="years">{item.years}</p>
               <div className="description">{item.description}</div>
               {title === 'Certificates' && item.title === 'The Complete 2024 Web Development Bootcamp' && (
-                <Img
+                <img
                   style={{ width: "100%", height: "auto", textAlign: "center" }}
                   // zoomed={zoomedImage === WebCert}
                   src={WebCert}
@@ -110,7 +110,7 @@ const Resume = () => {
                 />
               )}
               {title === 'Certificates' && item.title === 'Project Management Professional (PMP)' && (
-                <Img
+                <img
                   style={{ width: "100%", height: "auto", textAlign: "center" }}
                   // zoomed={zoomedImage === PMPCert}
                   src={PMPCert}
@@ -148,7 +148,7 @@ const Resume = () => {
       </div>
       {/* Conditionally render enlarged image */}
       {zoomedImage && (
-        <Img
+        <img
           style={{ width: "100%", height: "auto", textAlign: "center" }}
           zoomed={true}
           src={zoomedImage}
