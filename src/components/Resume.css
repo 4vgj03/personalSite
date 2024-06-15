@@ -120,7 +120,7 @@ h2Resume {
 
 
 
-//* Styles for enlarged image */
+/* Styles for enlarged image */
 .ReactModal__Overlay {
   z-index: 10000 !important;
 }
